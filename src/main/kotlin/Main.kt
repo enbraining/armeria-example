@@ -11,7 +11,7 @@ fun main() {
     var server = Server.builder()
         .http(8080)
         .service("/") {
-                      rtx, req -> HttpResponse.of("why")
+                      rtx, req -> HttpResponse.of("Hello")
         }.build()
 
     server.start().join()
