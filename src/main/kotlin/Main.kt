@@ -14,5 +14,7 @@ fun main() {
                       rtx, req -> HttpResponse.of("Hello")
         }.build()
 
+    server.closeOnJvmShutdown()
+
     server.start().join()
 }
